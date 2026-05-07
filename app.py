@@ -470,8 +470,7 @@ def create_interface():
 
     return demo
 
-
-def main():
+   def main():
     print("=" * 50)
     print("Cozy Flooring Visualiser - Starting")
     print("=" * 50)
@@ -485,14 +484,16 @@ def main():
         print("Model will be loaded on first use.")
 
     demo = create_interface()
+
     import os
 
-port = int(os.environ.get("PORT", 7861))
+    port = int(os.environ.get("PORT", 7861))
 
-demo.launch(
-    server_name="0.0.0.0",
-    server_port=port
-)
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=port
+    )
+
 
 if __name__ == "__main__":
     main()
