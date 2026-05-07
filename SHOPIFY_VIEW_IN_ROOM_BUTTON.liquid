@@ -1,0 +1,40 @@
+{%- comment -%}
+Cozy Visualiser button for Shopify product pages.
+Replace VISUALISER_URL_HERE with your hosted visualiser URL later.
+The product metafield should be:
+namespace: custom
+key: visualiser_handle
+example value: harbor-twist-pebble
+{%- endcomment -%}
+
+{% assign visualiser_handle = product.metafields.custom.visualiser_handle.value | default: product.handle %}
+
+<a
+  href="VISUALISER_URL_HERE?product={{ visualiser_handle | url_encode }}"
+  class="cozy-visualiser-button"
+  target="_blank"
+  rel="noopener"
+>
+  See it in my room
+</a>
+
+<style>
+  .cozy-visualiser-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 12px 0;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #b38b59;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+  }
+  .cozy-visualiser-button:hover {
+    background: #8a5c2f;
+    color: #fff;
+  }
+</style>

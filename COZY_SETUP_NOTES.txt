@@ -1,0 +1,52 @@
+COZY AI VISUALISER - TESTING NOTES
+
+What changed:
+- Added your Cozy product database from cozy products.txt.
+- Added a product dropdown, so customers no longer paste image links.
+- Added product info with View Product and Order Sample links.
+- Added URL auto-select support: /?product=harbor-twist-pebble
+- Kept the custom texture upload/URL section for testing only.
+
+How to run:
+1. Open this folder in PowerShell.
+2. Activate your venv:
+   venv\Scripts\activate
+3. Install requirements if needed:
+   pip install -r requirements.txt
+4. Start:
+   python app.py
+5. Open:
+   http://localhost:7861
+
+Shopify button flow later:
+- Put product metafield custom.visualiser_handle on each product.
+- Example: harbor-twist-pebble
+- Button link should be:
+  https://YOUR-VISUALISER-URL/?product=harbor-twist-pebble
+
+Included handles:
+- harbor-twist-pebble
+- harbor-twist-granite
+- harbor-twist-charcoal
+- harbor-twist-sand
+- harbor-twist-taupe
+- homestead-festival
+- homestead-solstice
+- homestead-celtic
+- homestead-oak
+- aura-desert
+- aura-cloud
+- aura-silver
+- aura-fog
+- sandhaven-steel
+- sandhaven-beige
+- sandhaven-grey
+- sandhaven-blue
+- sandhaven-silver
+- serenity-carbon
+- serenity-latte
+- serenity-cashmere
+- serenity-sage
+- serenity-seal
+
+Note: Sandhaven beige had a typo in your source file handle ('beigey'); I corrected it to sandhaven-beige.
