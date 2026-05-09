@@ -389,7 +389,7 @@ def create_interface():
                     blend_slider = gr.Slider(
                         minimum=0.0,
                         maximum=1.0,
-                        value=0.62,
+                        value=0.35,
                         step=0.05,
                         label="Keep original shadows",
                         info="Higher = more room lighting/shadows preserved. Lower = stronger new texture.",
@@ -397,7 +397,7 @@ def create_interface():
                     tile_slider = gr.Slider(
                         minimum=35,
                         maximum=220,
-                        value=90,
+                        value=value=220,
                         step=5,
                         label="Texture scale",
                         info="Lower = smaller/tighter carpet fibres. Higher = larger pattern.",
